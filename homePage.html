@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="homePage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Raleway:wght@500&family=Trispace&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="parallax">
+            <div class="wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#form">Form</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="textAnimation">
+                <h1 id="text"><span>&gt;</span>Hello Friend! Welcome to my page...</h1>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <section class="section" id="home">
+            <h1>HOME</h1>
+            <a name="home"></a>
+            <div class="sectionContent">
+                <p>Здраво. Моето име е Станислава Младеновска. Јас сум студент на Факлтет за Електротехника и Информациски Технологии, смер Компјутерски Технологии и Инженерство. Со овој проект ќе пробам да ви се претставам на кратко за тоа кои се моите интереси, желби, likes and dislikes, и слично. Се надевам дека ке уживате :)</p>
+                <img src="myPhoto.jpg" alt="Photo of me :D" id="myPhoto">
+            </div>
+        </section>
+        <section class="section" id="about">
+            <a name="about"></a>
+            <h1>ABOUT</h1>       
+            <div class="sectionContent">
+                <div class="listOfLikes">
+                    <h3><em>Get to know me better секција. <br>Длабо препорачувам преслушување/гледање на следниве, нема да зажалите:</em></h3>
+                   <div id="boxes">
+                        <div>
+                            <p >Music</p>
+                                <ul class="listItems">
+                                    <li>Pink Floyd</li>
+                                    <li>Led Zeppelin</li>
+                                    <li>Queen</li>
+                                    <li>David Bowie</li>
+                                    <li>The Doors</li>
+                                </ul>
+                        </div>
+                        <div>
+                            <p >Movies & TV Shows</p>
+                            <ul class="listItems">
+                                <ul>
+                                    <li>Friend</li>
+                                    <li>The Big Bang Theory</li>
+                                    <li>Mr. Robot</li>
+                                </ul>
+                                <ul>
+                                    <li>Interstellar</li>
+                                    <li>Inception</li>
+                                    <li>Beautiful Mind</li>
+                                </ul>
+                                
+                            </ul>
+                        </div>
+                        <div>
+                            <p >Hobbies</p>
+                            <ul class="listItems">
+                                <li>Playing guitar</li>
+                                <li>Coding</li>
+                                <li>Going out with friends</li>
+                                <li>Travelling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="gallery">
+            <a name="gallery"></a>
+            <h1>GALLERY</h1>
+            <p>За уште поголемо уживање: </p> <br>
+            <audio controls>
+                <source src="Music/Pink Floyd - Brain Damage _ Eclipse.mp3" type="audio/mp3">
+            </audio>
+        </section>
+        <section class="section" id="form">
+            <a name="form"></a>
+            <h1>FORM</h1>
+          <p id="description"><em>За подобри идни проекти, пополнете. Секакви критики се добредојдени!</em></p>
+            <br>
+          <form class="form">
+              <label for="name">Име: </label>
+              <input type="text" id="name" name="name" required placeholder="John" size="15" pattern=".{3,15}" title="3 to 15 characters required">
+            <p>     </p>
+        
+              <label for="name">Презиме: </label> 
+              <input type="text" id="surname" name="surname" required placeholder="Smith" size="15" pattern=".{3,15}" title="3 to 15 characters required">
+             <br> <br>
+             <p>Пол: </p>
+             <input type="radio" name="male" id="male" value="male">
+             <label for="male">Машко </label>
+             <input type="radio" name="female" id="female" value="female">
+             <label for="female">Женско </label>
+             <br>
+             <br>
+              <p>Севкупно, како би го оцениле мојот проект:</p> 
+                <input type="radio" name="rate" id="0-20" value="0-20" class="radioRate">
+                <label for="0-20">0-20</label>
+                <input type="radio" name="rate" id="20-40" value="20-40" class="radioRate">
+              <label for="20-40">20-40</label>
+              <input type="radio" name="rate" id="40-60" value="40-60" class="radioRate">
+              <label for="40-60">40-60</label>
+              <input type="radio" name="rate" id="60-80" value="60-80" class="radioRate">
+              <label for="60-80">60-80</label>
+              <input type="radio" name="rate" id="80-100" value="80-100" class="radioRate" checked>
+              <label for="80-100">80-100</label>
+              <br> <br>
+              <label for="positiveCritics">Што најмногу ви се допадна:</label> <br>
+              <textarea name="positiveCritics" id="positiveCritics" cols="40" rows="5" placeholder="Text..."></textarea>
+              <br> <br>
+              <label for="negativeCritics">На што да поработам:</label> <br>
+              <textarea name="negativeCritics" id="negativeCritics" cols="40" rows="5" placeholder="Text..."></textarea>
+              <br><br>
+                <input type="submit" name="submit" id="submit" value="Submit">
+                <input type="reset" name="reset" id="reset" value="Reset">
+          </form>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <a name="contact"></a>
+            <h1>CONTACT</h1>
+            <div class="container">
+                <div class="border">
+                    <a href="https://www.facebook.com/stasha99/">
+                        <img class="Icons" src="icons/facebook.png"  alt="Facebook">
+                    </a>
+                </div>
+                <div class="border">
+                     <a href="https://www.instagram.com/stash.mladenovska/">
+                    <img class="Icons" src="icons/instagram.png" alt="instagram">
+                    </a>
+                </div>
+                <div class="border">
+                    <a href="https://github.com/Stanislava99">
+                    <img class="Icons" src="icons/GitHub.png" alt="GitHub">
+                </a>
+                </div>
+                <div class="border">
+                    <a href="mailto:stanislavam@live.co.uk">
+                    <img src="icons/outlook.png" alt="Outlook Mail" class="Icons">
+                </a> 
+                </div>
+                <div class="border">
+                    <a href="mailto:kti1692018@feit.ukim.edu.mk">
+                    <img src="icons/feit.png" alt="FEIT Mail" class="Icons">
+                </a> 
+                </div>             
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>
