@@ -42,8 +42,12 @@
             <h1>HOME</h1>
             <a name="home"></a>
             <div class="sectionContent">
-                <p>Здраво. Моето име е Станислава Младеновска. Јас сум студент на Факлтет за Електротехника и Информациски Технологии, смер Компјутерски Технологии и Инженерство. Со овој проект ќе пробам да ви се претставам на кратко за тоа кои се моите интереси, желби, likes and dislikes, и слично. Се надевам дека ке уживате :)</p>
-                <img src="myPhoto.jpg" alt="Photo of me :D" id="myPhoto">
+                <div class="homeText">
+                    <h3>Здраво. Моето име е Станислава Младеновска. Студен на ФЕИТ,<br>Компјутерски Технологии и Инженерство </h3>
+                        <p> Со овој проект ќе пробам да ви се претставам на кратко. Живеам во Куманово и сум трета година студии. Како карактеристики што си ги обожувам, би ги издвоила дружењубивоста и трудољубивоста, а за подетални likes and disklikes ке имате можност да се запознаете во наредниве неколку минути. Се надевам дека ке уживате :)</p>
+                        <button class="CVbutton"><a href="Stanislavas-Resume-3.pdf" download="">Download CV</a></button>
+                    </div>  
+                <img src="myPhoto.jpg" alt="Photo of me :D" id="myPhoto"> 
             </div>
         </section>
         <section class="section" id="about">
@@ -51,7 +55,7 @@
             <h1>ABOUT</h1>       
             <div class="sectionContent">
                 <div class="listOfLikes">
-                    <h3><em>Get to know me better секција. <br>Длабо препорачувам преслушување/гледање на следниве, нема да зажалите:</em></h3>
+                    <h3><em>Get to know me better секција. <br>Длабоко препорачувам преслушување/гледање на следниве, нема да зажалите:</em></h3>
                    <div id="boxes">
                         <div>
                             <p >Music</p>
@@ -95,7 +99,8 @@
         <section class="section" id="gallery">
             <a name="gallery"></a>
             <h1>GALLERY</h1>
-            <p>За уште поголемо уживање: </p> <br>
+            <p>(во изработка)</p>
+            <p>За уште поголемо уживање:  </p> <br>
             <audio controls>
                 <source src="Music/Pink Floyd - Brain Damage _ Eclipse.mp3" type="audio/mp3">
             </audio>
@@ -106,17 +111,17 @@
           <p id="description"><em>За подобри идни проекти, ве молам пополнете. Секакви критики се добредојдени!</em></p>
             <br>
           <form class="form">
-              <label for="name">Име: </label>
+              <label for="name">Име:   </label>
               <input type="text" id="name" name="name" required placeholder="John" size="15" pattern=".{3,15}" title="3 to 15 characters required">
             <p>     </p>
         
-              <label for="name">Презиме: </label> 
+              <label for="name">Презиме:   </label> 
               <input type="text" id="surname" name="surname" required placeholder="Smith" size="15" pattern=".{3,15}" title="3 to 15 characters required">
              <br> <br>
              <p>Пол: </p>
-             <input type="radio" name="male" id="male" value="male">
+             <input type="radio" name="gender" id="male" value="male">
              <label for="male">Машко </label>
-             <input type="radio" name="female" id="female" value="female">
+             <input type="radio" name="gender" id="female" value="female">
              <label for="female">Женско </label>
              <br>
              <br>
