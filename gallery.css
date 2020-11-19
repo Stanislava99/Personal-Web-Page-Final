@@ -190,9 +190,24 @@ header {
     opacity: 0.5;
     font-size: 12px;
   }
-
-
   #travelChecklist {
-      background-color: #ddda;
-      
+      background-color: rgba(165, 105, 105, 0.667);
+      width: 100%;
+      color: rgba(54, 28, 28, 0.667);
+      text-transform: uppercase;
+      height: 1000px;
   }
+  #gender {
+    width: 65%;
+    margin: 0 auto;
+    
+  }
+  .genderItem {
+    display: flex;
+    
+  }
+  #gender h1 {
+    text-align: center;
+    padding: 15px 0;
+  }
+  
