@@ -10,17 +10,22 @@
 <body>
     <main>
         <section id="panel">
-            <h1>Please, log in before you continue</h1>
+            <h1>Please, <span id="logIn">log in</span> log in before you continue</h1>
             <form name="info" action="blog.html" method="POST">
                 <label for="name">First Name: </label>
+                &nbsp;
                 <input id="name" type="text"  placeholder="John" pattern=".{3,15}" required>
-                <br>
+               <br>
+               <br>
         
                 <label for="surname">Last Name: </label>
+                &nbsp;
                 <input id="surname" type="text"  placeholder="Black" pattern=".{2,15}" required>
                 <br>
-            
+                <br>
+
                 <label for="email">Email:</label>
+                &nbsp;
                 <input type="email" name="E-mail" id="email" required placeholder="example@yahoo.com">
                 <br>
                 <input id="submit" type="submit" onclick="redirect()">
@@ -28,7 +33,16 @@
             </form>
             
             </section>
+
     </main>
-    <script src="blog-login.js"></script>
+ <script type="text/javascript" src="blog-login.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+
+  
 </body>
 </html>

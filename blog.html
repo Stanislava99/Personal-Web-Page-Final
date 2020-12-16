@@ -4,9 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
     <link rel="stylesheet" href="blog.css">
+   
 </head>
 <body>
-    <script src="blog.js"></script>
+    <header>
+        <div class="blogWelcome">
+            <button id="backLogin" onclick="window.location.href='blog-login.html'">Logout</button>
+            <button id="backHome" onclick="window.location.href='homePage.html'">Home</button>
+           <h1>BLOG</h1>
+        </div>
+        <div class="navigationBar">
+            <ul>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li>Forum</li>
+            </ul>
+        </div>
+        <div class="photo">
+        </div>
+    </header>
+
+    <main>
+      <section class="music" id="music"> 
+          
+              <h1>                 
+                Listen and Rate my Spotify playlists
+                  <br> <br>
+         
+              You can also add me on <a href="https://open.spotify.com/user/21asjsjt4aqdmjwa5f5pc3soq">Spotify</a>, music connects people ;)
+          </h1>
+         
+          
+          <div class="playlist1">
+            <iframe src="https://open.spotify.com/embed/playlist/56WmySliqoq9PVRicXM6wS" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="response">
+                <button id="like1">
+                    <i class="fas fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input11" value="0">
+                <button id="dislike1">
+                    <i class="fas fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input21" value="0">
+                
+            </div>
+          </div>
+          <div class="playlist2">
+            <iframe src="https://open.spotify.com/embed/playlist/2Z0y4tLIWvC4NRr817iH9X" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="response">
+                <button id="like2">
+                    <i class="fas fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input12" value="0">
+                <button id="dislike2">
+                    <i class="fas fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input22" value="0">
+                
+            </div>
+          </div>
+          <div class="playlist3">
+            <iframe src="https://open.spotify.com/embed/playlist/1aphyR1z8yJYYcO7UQJCy5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>    
+            <div class="response">
+                <button id="like3">
+                    <i class="fas fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input13" value="0">
+                <button id="dislike3">
+                    <i class="fas fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input23" value="0">
+                
+            </div>
+          </div>
+    </section>
+
+    <section class="movies" id="movies">
+        <br> <br> 
+        <h1> Movies & TV Shows</h1>
+
+        <div class="movie">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <div class="container">
+                <div class="post1">
+                    <div class="text1">
+                        Thanks for rating us!
+                    </div>
+                    <div class="edit1">
+                        EDIT
+                    </div>
+              </div>
+                    <div class="star-widget1">
+                      <input type="radio" name="rate" id="rate-5">
+                      <label for="rate-5" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-4">
+                      <label for="rate-4" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-3">
+                      <label for="rate-3" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-2">
+                      <label for="rate-2" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-1">
+                      <label for="rate-1" class="fas fa-star"></label>
+                      <form action="#">
+                
+                            <div class="textarea">
+                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                            </div>
+                        
+                             <br>
+                            <div class="btn1">
+                                <button type="submit">Post</button>
+                            </div>
+                         </form>
+                    </div>
+                </div>
+          </div>
+        <div class="movie">
+            <div class="container">
+                    <div class="post">
+                      <div class="text">
+              Thanks for rating us!</div>
+              <div class="edit">
+              EDIT</div>
+              </div>
+                <div class="star-widget">
+                      <input type="radio" name="rate" id="rate-5">
+                      <label for="rate-5" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-4">
+                      <label for="rate-4" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-3">
+                      <label for="rate-3" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-2">
+                      <label for="rate-2" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-1">
+                      <label for="rate-1" class="fas fa-star"></label>
+                        <form action="#">
+                            <div class="textarea">
+                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                            </div>
+                            <br>
+                            <div class="btn">
+                                <button type="submit">Post</button>
+                            </div>
+                        </form> 
+                </div>
+            </div>  
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5iaYLCiq5RM?start=64" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+        <div class="movie">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xIBiJ_SzJTA?start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
+            <div class="container">
+                <div class="post">
+                    <div class="text">
+                        Thanks for rating us!
+                    </div>
+                    <div class="edit">
+                        EDIT
+                    </div>
+              </div>
+                    <div class="star-widget">
+                      <input type="radio" name="rate" id="rate-5">
+                      <label for="rate-5" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-4">
+                      <label for="rate-4" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-3">
+                      <label for="rate-3" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-2">
+                      <label for="rate-2" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-1">
+                      <label for="rate-1" class="fas fa-star"></label>
+                      <form action="#">
+                
+                            <div class="textarea">
+                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                            </div>
+                        
+                             <br>
+                            <div class="btn">
+                                <button type="submit">Post</button>
+                            </div>
+                         </form>
+                    </div>
+                </div>
+          </div>
+          <div class="movie">
+            <div class="container">
+                    <div class="post">
+                      <div class="text">
+              Thanks for rating us!</div>
+              <div class="edit">
+              EDIT</div>
+              </div>
+                <div class="star-widget">
+                      <input type="radio" name="rate" id="rate-5">
+                      <label for="rate-5" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-4">
+                      <label for="rate-4" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-3">
+                      <label for="rate-3" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-2">
+                      <label for="rate-2" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-1">
+                      <label for="rate-1" class="fas fa-star"></label>
+                        <form action="#">
+                            <div class="textarea">
+                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                            </div>
+                            <br>
+                            <div class="btn">
+                                <button type="submit">Post</button>
+                            </div>
+                        </form> 
+                </div>
+            </div>  
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hDNNmeeJs1Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+        </div>
+        
+    </section>
+
+    <section class="forum"> 
+        <h1> Forum Topics </h1>
+        <div class="topics">
+            <div class="divForum" id="nightLife">
+                <div class="photo">
+                    <img src="backgrounds/nightLfe.jpg" alt="Night Life">
+                </div>
+                <div class="forumPart">
+
+                </div>
+            </div>
+            <div class="divForum" id="studentLi">
+                <div class="forumPart">
+
+                </div>
+                <div class="photo">
+                    <img src="backgrounds/studentLife.jpg" alt="">
+                </div>
+            </div>
+            <div class="divForum" id="coronavirus">
+                <div class="photo">
+                    <img src="backgrounds/coronaVirus.jpg" alt="">
+                </div>
+                <div class="forumPart">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+              
+    </main>
+  
+    <script type="text/javascript" src="blog.js"></script>
+  
 </body>
 </html>
+

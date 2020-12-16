@@ -1,0 +1,311 @@
+html body * {
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+
+    background-color: rgba(245, 245, 245,0);
+}
+
+.blogWelcome { 
+    margin: 30px 70px;
+    color: black;
+    justify-content: center;
+    font-size: 2em;
+    height: 220px;
+}
+.blogWelcome button {
+    font-weight: bold;
+    text-transform: uppercase;
+    width:74px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    
+}
+
+.blogWelcome button:hover {
+    background-color: rgba(189, 114, 2, 0.973);
+    color: white;
+    border-color:rgb(230, 216, 24);
+}
+.blogWelcome h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.navigationBar {
+    color: black;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+.navigationBar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:4px  0px ;
+    
+}
+
+.navigationBar li {
+    border-right: 1px solid black;
+    padding-right: 130px;
+    padding-left: 130px;
+    list-style-type: none;
+    font-size: 1.3em;
+
+}
+.navigationBar a { 
+    text-decoration: none;
+    color: black;
+}
+
+.navigationBar li:last-child {
+    border-right: none;
+}
+
+.photo {
+    height: 600px;
+    background-image: url("backgrounds/blogPhoto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main {
+    border-top:2px solid rgb(240, 208, 30);
+}
+.music {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 65px;
+    background-image: url(backgrounds/cool-background2.png);
+}
+
+.response {
+    position: relative;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+
+input {
+    width: 50px;
+    border: none;
+    background: none;
+    color: whitesmoke;
+    font-size: 30px;
+    margin: 0 10px;
+    pointer-events: none;
+}
+
+button {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 15px;
+    margin: 10px 0;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+
+button:active {
+    color: yellow;
+    transform: scale(1.2);    
+}
+
+.music h1 {
+    color: yellow;
+
+}
+
+.music a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.movies {
+    background-image: url(backgrounds/yannes-kiefer-kqZadEfnylY-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.movies h1 {
+    color: yellow;
+    text-align: center;
+    margin-top:0;
+    font-size: 1.5em;
+
+}
+.movie {
+    display: inline-block;
+    padding-top: 50px;
+}
+
+.movie:last-child {
+    padding-bottom: 50px;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    border:none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container .post{
+    display: none;
+  }
+  .container .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+  }
+  .container .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .container .edit:hover{
+    text-decoration: underline;
+  }
+  .container .star-widget input{
+    display: none;
+  }
+  .star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+  }
+  input:not(:checked) ~ label:hover,
+  input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+  }
+  input:checked ~ label{
+    color: #fd4;
+  }
+  input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+  }
+  #rate-1:checked ~ form header:before{
+    content: "I just hate it 😠";
+  }
+  #rate-2:checked ~ form header:before{
+    content: "I don't like it 😒";
+  }
+  #rate-3:checked ~ form header:before{
+    content: "It is awesome 😄";
+  }
+  #rate-4:checked ~ form header:before{
+    content: "I just like it 😎";
+  }
+  #rate-5:checked ~ form header:before{
+    content: "I just love it 😍";
+  }
+  .container form{
+    display: none;
+  }
+  input:checked ~ form{
+    display: block;
+  }
+  form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+  form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+  }
+  .textarea textarea:focus{
+    border-color: #444;
+  }
+  form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+    padding-right: 35px;
+  }
+  form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form .btn button:hover{
+    background: #725e5e;
+  }
+  
+  .movie {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .forum {
+    display: block;
+    background-image: url(backgrounds/forumBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .forum div {
+    background: none;
+  }
+  .forum img {
+    width: 200px;
+    height: 350px;
+
+  }
+
+  .divForum {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .topics .photo {
+    width: 30%;
+    border: 1px solid black;
+  }
+
+  .topics .forumPart {
+    width: 70%;
+  }

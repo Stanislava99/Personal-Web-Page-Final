@@ -1,6 +1,9 @@
 function redirect(){
-    var name=document.getElementById('name').value;
-    sessionStorage.setItem("nameValue",name);
-    sessionStorage.setItem("surnameValue",surname);
-    return false;
+    let name=document.getElementById('name').value;
+    let surname=document.getElementById('surname').value;
+   
+    localStorage.setItem("nameValue",name);
+    localStorage.setItem("surnameValue",surname);
+    
+    return ;
 }

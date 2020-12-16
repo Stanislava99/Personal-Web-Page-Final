@@ -1,6 +1,7 @@
 * {
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 body{ 
     font-family: 'Montserrat', sans-serif;
@@ -133,17 +134,16 @@ main {
 #home {
     background-color: #3b383a;
     color: #e6af2e;
-    height: 600px;
+    height: 700px;
 }
 
 #home .sectionContent{
    display: flex;
 }
 .homeText {
+    width: 70%;
     color: #e6af2e;
     display: block;   
-    position: relative;
-    left: 80px; 
 }
 
 .homeText h3 {
@@ -151,9 +151,22 @@ main {
     padding-bottom: 30px ;
 }
 .homeText p {
+    text-align:justify;
     font-size: 0.3em;
     position: relative;
     left: 100px; 
+}
+
+.homePhoto {
+    width:30%;
+     border: 1px solid black;
+
+}
+.homePhoto #myPhoto {
+    width: 300px;
+    height: 400px;
+    padding:none;
+
 }
 
 .CVbutton {
@@ -166,7 +179,6 @@ main {
     padding: 15px;
     border: 1px solid #e6af2e;
     border-radius: 3px;
-    
     cursor: pointer;
 }
 .CVbutton  a{
@@ -181,12 +193,7 @@ main {
     box-shadow: 0px 0px 3px 3px  #e6af2e;
   
 }
-#home #myPhoto {
-    max-width: 300px;
-    position: relative;
-    right: 300px;
-    bottom: 60px;
-}
+
 .section:nth-of-type(1) p {
     font-size: 1.3em;
     width: 50%;
@@ -226,40 +233,9 @@ main {
 #boxes div {
     padding: 100px;
 }
-#gallery{
-    background-image: url(backgrounds/monica-galentino-zjk0Tx6-M6Q-unsplash.jpg);
-    background-size: cover;
-    height: 700px;
-    text-align: center;
-    color: #9a0101;
-    width:0 auto ;
-}
 
-
-audio
-{
--webkit-transition:all 0.5s linear;
--moz-transition:all 0.5s linear;
--o-transition:all 0.5s linear;
-transition:all 0.5s linear;
--moz-box-shadow: 2px 2px 4px 0px #006773;
--webkit-box-shadow:  2px 2px 4px 0px #006773;
-box-shadow: 2px 2px 4px 0px #006773;
--moz-border-radius:7px 7px 7px 7px ;
--webkit-border-radius:7px 7px 7px 7px ;
-border-radius:7px 7px 7px 7px ;
-}
-audio:hover, audio:focus, audio:active
-{
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--webkit-transform: scale(1.05);
--moz-transform: scale(1.05);
-transform: scale(1.05);
-}
 #form {
-    height: 900px;
+    height: 1000px;
     color: white;
     text-align: center;
     background-color: #151515;
@@ -267,6 +243,7 @@ transform: scale(1.05);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    margin-bottom: none;
 } 
 #form  h1{
     text-align: center;
@@ -317,7 +294,8 @@ footer {
     background-color: #040101;
     color: whitesmoke;
     height: 400px;
-    margin-top:none;
+    
+    
 }
 
 #contact h1{
