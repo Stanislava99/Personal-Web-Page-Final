@@ -159,12 +159,12 @@ main {
 
 .homePhoto {
     width:30%;
-
 }
 .homePhoto #myPhoto {
     width: 300px;
-    height: 400px;
+    height: 100%;
     padding:none;
+    margin: none;
 
 }
 
@@ -185,7 +185,16 @@ main {
     text-decoration: none;
     color: white;
 }
+@media screen and (max-width: 1450px) {
+        .homePhoto img{
+            max-width: 250px;
+        }
 
+        #home {
+            font-size: 0.8em;
+        }
+    
+}
 .CVbutton:hover {
     transform: scale(1.2) perspective(1px);
     font-weight: 700;
@@ -200,12 +209,7 @@ main {
     justify-content: flex-start; 
 }
 
-.section:nth-of-type(1) #myPhoto {
-    width: 30%;
-    margin-left: 160px;
-    justify-content: flex-end;
 
-}
 #about {
     background-image: url(backgrounds/freddie-marriage-V_xncvgzDoo-unsplash.jpg);
     background-size: cover;
