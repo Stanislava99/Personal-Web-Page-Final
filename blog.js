@@ -1,25 +1,7 @@
-    // // Your web app's Firebase configuration
-    // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    // var firebaseConfig = {
-    //     apiKey: "AIzaSyCImzRQa2NQKel7VE55S_PliUCU2rNWZUk",
-    //     authDomain: "presonal-web-page.firebaseapp.com",
-    //     databaseURL: "https://presonal-web-page-default-rtdb.europe-west1.firebasedatabase.app",
-    //     projectId: "presonal-web-page",
-    //     storageBucket: "presonal-web-page.appspot.com",
-    //     messagingSenderId: "188818464429",
-    //     appId: "1:188818464429:web:41298cc42168ee3e2c7024",
-    //     measurementId: "G-QVYHB4YCFL"
-    // };
-    // // Initialize Firebase
-    // firebase.initializeApp(firebaseConfig);
-    // firebase.analytics();  
 
 
-// const name = localStorage.getItem('nameValue');
-// const surname = localStorage.getItem('surnameValue');
-
-// document.getElementById('reslut-name').innerHTML=name;
-// document.getElementById('reslut-surname').innerHTML=surname;
+  const nameOfUser = localStorage.getItem('nameValue');
+   const surnameOfUser = localStorage.getItem('surnameValue');
 
 
 let like1 = document.querySelector ('#like1');
@@ -137,56 +119,67 @@ dislike3.addEventListener('click', ()=>{
     
 })
 
+const ratings = {
+  interstellar: 5.0,
+  inception: 5.0,
+  mrRobot: 5.0,
+  friends: 5.0,
+  bigBang:5.0
+}
 
-const btn1 = document.querySelector("button1");
-      const post1 = document.querySelector(".post1");
-      const widget1 = document.querySelector(".star-widget1");
-      const editBtn1 = document.querySelector(".edit1");
-      btn1.onclick = ()=>{
-        widget1.style.display = "none";
-        post1.style.display = "block";
-        editBtn1.onclick = ()=>{
-          widget1.style.display = "block";
-          post1.style.display = "none";
-        }
-        return false;
-      }
-      const btn2 = document.querySelector("button2");
-      const post2 = document.querySelector(".post2");
-      const widget2 = document.querySelector(".star-widget2");
-      const editBtn2 = document.querySelector(".edit2");
-      btn2.onclick = ()=>{
-        widget2.style.display = "none";
-        post2.style.display = "block";
-        editBtn2.onclick = ()=>{
-          widget2.style.display = "block";
-          post2.style.display = "none";
-        }
-        return false;
-      }
-      const btn3 = document.querySelector("button3");
-      const post3 = document.querySelector(".post3");
-      const widget3 = document.querySelector(".star-widget3");
-      const editBtn3 = document.querySelector(".edit3");
-      btn3.onclick = ()=>{
-        widget3.style.display = "none";
-        post3.style.display = "block";
-        editBtn3.onclick = ()=>{
-          widget3.style.display = "block";
-          post3.style.display = "none";
-        }
-        return false;
-      }
-      const btn4 = document.querySelector("button4");
-      const post4 = document.querySelector(".post4");
-      const widget4 = document.querySelector(".star-widget4");
-      const editBtn4 = document.querySelector(".edit4");
-      btn4.onclick = ()=>{
-        widget4.style.display = "none";
-        post4.style.display = "block";
-        editBtn4.onclick = ()=>{
-          widget4.style.display = "block";
-          post4.style.display = "none";
-        }
-        return false;
-      }
+
+const starsTotal = 5;
+
+document.addEventListener('DOMContentLoaded', getRatings);
+
+const productSelect = document.getElementById('product-select');
+const ratingControl = document.getElementById('rating-control');
+
+let product;
+
+productSelect.addEventListener('change', (e) => {
+  product = e.target.value;
+  // Enable rating control
+  ratingControl.disabled = false;
+  ratingControl.value = ratings[product];
+});
+
+ratingControl.addEventListener('blur', (e) => {
+  const rating = e.target.value;
+
+  if (rating > 5) {
+    alert('Please rate 1 - 5');
+    return;
+  }
+  ratings[product] = rating;
+
+  getRatings();
+});
+
+function getRatings() {
+  for (let rating in ratings) {
+    const starPercentage = (ratings[rating] / starsTotal) * 100;
+
+    const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+
+    document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
+
+    document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
+  }
+}
+
+$(document).ready(function () {
+    $('#comment').click(function(){
+        let input = $('#input').val();
+        $('.box').append(nameOfUser +' '+ surnameOfUser +' :' +input+'<br>');
+        $('#input').val('');
+        $('.box-container').slideDown();
+    });
+    $('#cancel').click(function () { 
+        $('#input').val('');      
+    });
+    $('#delete').click(function () { 
+      $('.box').text('');      
+      $('.box-container').slideUp();
+  });
+  });

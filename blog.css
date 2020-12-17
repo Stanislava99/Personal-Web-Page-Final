@@ -128,183 +128,171 @@ button:active {
     color: rgb(255, 255, 255);
 }
 .movies {
-    background-image: url(backgrounds/yannes-kiefer-kqZadEfnylY-unsplash.jpg);
+    background-image: url(backgrounds/bricks.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 500px;
+    font-size: 1.5em;
+    margin:none;
 
 }
 .movies h1 {
-    color: yellow;
-    text-align: center;
-    margin-top:0;
-    font-size: 1.5em;
-}
-.movie {
-    display: inline-block;
-    padding-top: 50px;
+  text-align: center;
 }
 
-.movie:last-child {
-    padding-bottom: 50px;
+.movies a{
+  text-decoration: none;
+  color:black
+}
+.mt-5 {
+  width: 100%;
+  margin-left:38%;
+}
+.stars-outer {
+  position: relative;
+  display: inline-block;
 }
 
-.container{
-    position: relative;
-    width: 400px;
-    border:none;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .container .post{
-    display: none;
-  }
-  .container .text{
-    font-size: 25px;
-    color: #666;
-    font-weight: 500;
-  }
-  .container .edit{
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    font-size: 16px;
-    color: #666;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  .container .edit:hover{
-    text-decoration: underline;
-  }
-  .container .star-widget input{
-    display: none;
-  }
-  .star-widget label{
-    font-size: 40px;
-    color: #444;
-    padding: 10px;
-    float: right;
-    transition: all 0.2s ease;
-  }
-  input:not(:checked) ~ label:hover,
-  input:not(:checked) ~ label:hover ~ label{
-    color: #fd4;
-  }
-  input:checked ~ label{
-    color: #fd4;
-  }
-  input#rate-5:checked ~ label{
-    color: #fe7;
-    text-shadow: 0 0 20px #952;
-  }
-  #rate-1:checked ~ form header:before{
-    content: "I just hate it 😠";
-  }
-  #rate-2:checked ~ form header:before{
-    content: "I don't like it 😒";
-  }
-  #rate-3:checked ~ form header:before{
-    content: "It is awesome 😄";
-  }
-  #rate-4:checked ~ form header:before{
-    content: "I just like it 😎";
-  }
-  #rate-5:checked ~ form header:before{
-    content: "I just love it 😍";
-  }
-  .container form{
-    display: none;
-  }
-  input:checked ~ form{
-    display: block;
-  }
-  form header{
-    width: 100%;
-    font-size: 25px;
-    color: #fe7;
-    font-weight: 500;
-    margin: 5px 0 20px 0;
-    text-align: center;
-    transition: all 0.2s ease;
-  }
-  form .textarea{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-  }
-  form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: #eee;
-    border: 1px solid #333;
-    background: #222;
-    padding: 10px;
-    font-size: 17px;
-    resize: none;
-  }
-  .textarea textarea:focus{
-    border-color: #444;
-  }
-  form .btn{
-    height: 45px;
-    width: 100%;
-    margin: 15px 0;
-    padding-right: 35px;
-  }
-  form .btn button{
-    height: 100%;
-    width: 100%;
-    border: 1px solid #444;
-    outline: none;
-    background: #222;
-    color: #999;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  form .btn button:hover{
-    background: #725e5e;
-  }
-  
-  .movie {
-    display: flex;
-    justify-content: center;
-  }
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-outer::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: rgb(43, 42, 42);
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f8ce0b;
+}
 
 
-  .forum {
-    display: block;
-    background-image: url(backgrounds/forumBackground.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .forum div {
-    background: none;
-  }
-  .forum img {
-    width: 200px;
-    height: 350px;
+.topics {
+  margin: 0 auto;
+  padding: 15px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  letter-spacing: none;
+  background-color: darkgray;
+  text-align: center;
+}
 
-  }
+.topicsContent {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
 
-  .divForum {
-    display: flex;
-    justify-content: space-between;
+.topicsContent article {
+  width: 30%;
+  border-right: 1px solid grey;
+  text-align: justify;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  padding-right:35px ;
+}
+.topicsContent article:last-child {
+  border-right: none;
+}
 
-  }
+.topicsContent img {
+  width: 300px;
+  padding-left: 40px;
 
-  .topics .photo {
-    width: 30%;
-    border: 1px solid black;
-  }
+}
+.topics .container {
+  width: 700px;
+  text-align: center;
+  margin-top: 60px;
+  margin: 0 auto;
+  font-size: 1.3em;
 
-  .topics .forumPart {
-    width: 70%;
-  }
+}
+.topics .intro {
+  width: 60%
+}
+.container-buttons {
+  display: flex;
+  justify-content: left;
+}
+
+.box-container  {
+  height: 200px;
+  width: 100%;
+  background:#444 ;
+  box-shadow: 0 5px 15px #111;
+  border-radius:5px ;
+  padding: 15px;
+  display: none;
+}
+
+.box-container .box {
+  height: 80%;
+  width: 100%; 
+  border-radius: 5px;
+  padding: 1px;
+  background-color: #f8f8f8;
+  overflow-y:auto;
+  text-align: left;
+}
+
+.topics #input {
+  width: 100%;
+  height:40px ;
+  background:none;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.topics #topic {
+  width: 100%;
+  height:40px ;
+  background:none;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.topics #input:focus {
+  border-bottom: 2px solid #fff;
+}
+
+.topics button {
+  height: 30px;
+  width: 160px;
+  background-color: #ff0033;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size:15px;
+  box-shadow: 0 3px 10px #111;
+}
+
+.topics button:hover {
+  opacity: .8;
+}
+
+footer{
+  background-color: whitesmoke;
+  height: 100px;
+  text-align: center;
+ 
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+}

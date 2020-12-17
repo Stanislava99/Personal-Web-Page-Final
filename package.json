@@ -1,0 +1,19 @@
+{
+  "name": "personal-web-page-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blog-login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stanislava99/Personal-Web-Page-Final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stanislava99/Personal-Web-Page-Final/issues"
+  },
+  "homepage": "https://github.com/Stanislava99/Personal-Web-Page-Final#readme"
+}

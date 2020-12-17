@@ -7,10 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
     <link rel="stylesheet" href="blog.css">
+    <script src="jquery.js" charset="utf-8"></script>
    
 </head>
 <body>
     <header>
+
+        <!-- 
+            Za delot Movies I Topics, bi trebalo se da e vo red no dokolku ima pomestuvanja ili slicno,
+            da ve izvestam deka imav problem i vscode ne saka da mi go cita JQuery delot i zatoa ne mozev 
+            da proveram dali se funkcionira kako sto treba. Kodot e tocen, no vklucen vo stranata ne znam kako 
+            ke izgleda
+
+            Dokolku ima pomestuvanja, izvinete :) 
+
+         -->
         <div class="blogWelcome">
             <button id="backLogin" onclick="window.location.href='blog-login.html'">Logout</button>
             <button id="backHome" onclick="window.location.href='homePage.html'">Home</button>
@@ -83,185 +94,162 @@
     </section>
 
     <section class="movies" id="movies">
-        <br> <br> 
+        <br>
         <h1> Movies & TV Shows</h1>
-
-        <div class="movie">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-            <div class="container">
-                <div class="post1">
-                    <div class="text1">
-                        Thanks for rating us!
+        <div class="container mt-5">
+            <div class="form-group">
+              <select id="product-select" class="form-control custom-select">
+                  <option value="0" disabled selected>Select Movie</option>
+                  <option value="interstellar">Interstellar</option>
+                  <option value="inception">Inception</option>
+                  <option value="mrRobot">Mr. Robot</option>
+                  <option value="friends">Friends</option>
+                  <option value="bigBang">The Big Bang Theory</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <input type="number" id="rating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1 - 5" disabled>
+            </div>
+          
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Movies & TV Shows</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="interstellar">
+                  <td><a href="https://www.youtube.com/watch?v=zSWdZVtXT7E&t=3s">Interstellar</a></td>
+                  <td>
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
                     </div>
-                    <div class="edit1">
-                        EDIT
+                    <span class="number-rating"></span>
+                  </td>
+                </tr>
+                <tr class="inception">
+                  <td><a href="https://www.youtube.com/watch?v=YoHD9XEInc0">Inception</a></td>
+                  <td>
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
                     </div>
-              </div>
-                    <div class="star-widget1">
-                      <input type="radio" name="rate" id="rate-5">
-                      <label for="rate-5" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-4">
-                      <label for="rate-4" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-3">
-                      <label for="rate-3" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-2">
-                      <label for="rate-2" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-1">
-                      <label for="rate-1" class="fas fa-star"></label>
-                      <form action="#">
-                
-                            <div class="textarea">
-                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                            </div>
-                        
-                             <br>
-                            <div class="btn1">
-                                <button type="submit">Post</button>
-                            </div>
-                         </form>
+                    <span class="number-rating"></span>
+                  </td>
+                </tr>
+                <tr class="mrRobot">
+                  <td><a href="https://www.youtube.com/watch?v=xIBiJ_SzJTA&t=1s">Mr. Robot</a></td>
+                  <td>
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
                     </div>
-                </div>
-          </div>
-        <div class="movie">
-            <div class="container">
-                    <div class="post">
-                      <div class="text">
-              Thanks for rating us!</div>
-              <div class="edit">
-              EDIT</div>
-              </div>
-                <div class="star-widget">
-                      <input type="radio" name="rate" id="rate-5">
-                      <label for="rate-5" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-4">
-                      <label for="rate-4" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-3">
-                      <label for="rate-3" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-2">
-                      <label for="rate-2" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-1">
-                      <label for="rate-1" class="fas fa-star"></label>
-                        <form action="#">
-                            <div class="textarea">
-                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                            </div>
-                            <br>
-                            <div class="btn">
-                                <button type="submit">Post</button>
-                            </div>
-                        </form> 
-                </div>
-            </div>  
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5iaYLCiq5RM?start=64" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </div>
-        <div class="movie">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xIBiJ_SzJTA?start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
-            <div class="container">
-                <div class="post">
-                    <div class="text">
-                        Thanks for rating us!
+                    <span class="number-rating"></span>
+                  </td>
+                </tr>
+                <tr class="friends">
+                  <td><a href="https://www.youtube.com/watch?v=mXcuZcSReqU">Friends</a></td>
+                  <td>
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
                     </div>
-                    <div class="edit">
-                        EDIT
+                    <span class="number-rating"></span>
+                  </td>
+                </tr>
+                <tr class="bigBang">
+                  <td><a href="https://www.youtube.com/watch?v=rCj-Fb1OmXg">The Big Bang Theory</a></td>
+                  <td>
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
                     </div>
-              </div>
-                    <div class="star-widget">
-                      <input type="radio" name="rate" id="rate-5">
-                      <label for="rate-5" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-4">
-                      <label for="rate-4" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-3">
-                      <label for="rate-3" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-2">
-                      <label for="rate-2" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-1">
-                      <label for="rate-1" class="fas fa-star"></label>
-                      <form action="#">
-                
-                            <div class="textarea">
-                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                            </div>
-                        
-                             <br>
-                            <div class="btn">
-                                <button type="submit">Post</button>
-                            </div>
-                         </form>
-                    </div>
-                </div>
-          </div>
-          <div class="movie">
-            <div class="container">
-                    <div class="post">
-                      <div class="text">
-              Thanks for rating us!</div>
-              <div class="edit">
-              EDIT</div>
-              </div>
-                <div class="star-widget">
-                      <input type="radio" name="rate" id="rate-5">
-                      <label for="rate-5" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-4">
-                      <label for="rate-4" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-3">
-                      <label for="rate-3" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-2">
-                      <label for="rate-2" class="fas fa-star"></label>
-                      <input type="radio" name="rate" id="rate-1">
-                      <label for="rate-1" class="fas fa-star"></label>
-                        <form action="#">
-                            <div class="textarea">
-                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                            </div>
-                            <br>
-                            <div class="btn">
-                                <button type="submit">Post</button>
-                            </div>
-                        </form> 
-                </div>
-            </div>  
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hDNNmeeJs1Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                    <span class="number-rating"></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
         </div>
         
     </section>
+    
+    <section class="topics">
+        <h1 id="naslov">Most Popular Topics:</h1>
+        <div class="topicsContent">
+            <article id="article1">
+                <img src="backgrounds/coronaVirus.jpg" alt="coronavirus">
+                <p>
+                    <h1>Mental Health during COVID-19</h1>
+                    The COVID-19 pandemic and the resulting economic recession have negatively affected many people’s mental health and created new barriers for people already suffering from mental illness and substance use disorders. In a KFF Tracking Poll conducted in mid-July, 53% of adults in the United States reported that their mental health has been negatively impacted due to worry and stress over the coronavirus. This is significantly higher than the 32% reported in March, the first time this question was included in KFF polling. Many adults are also reporting specific negative impacts on their mental health and wellbeing, such as difficulty sleeping (36%) or eating (32%), increases in alcohol consumption or substance use (12%), and worsening chronic conditions (12%), due to worry and stress over the coronavirus. As the pandemic wears on, ongoing and necessary public health measures expose many people to experiencing situations linked to poor mental health outcomes, such as isolation and job loss.
+                    <br>
+                    <a href="The COVID-19 pandemic and the resulting economic recession have negatively affected many people’s mental health and created new barriers for people already suffering from mental illness and substance use disorders. In a KFF Tracking Poll conducted in mid-July, 53% of adults in the United States reported that their mental health has been negatively impacted due to worry and stress over the coronavirus. This is significantly higher than the 32% reported in March, the first time this question was included in KFF polling. Many adults are also reporting specific negative impacts on their mental health and wellbeing, such as difficulty sleeping (36%) or eating (32%), increases in alcohol consumption or substance use (12%), and worsening chronic conditions (12%), due to worry and stress over the coronavirus. As the pandemic wears on, ongoing and necessary public health measures expose many people to experiencing situations linked to poor mental health outcomes, such as isolation and job loss">
+                        Continue to read... 
+                    </a>
+                </p>
+            </article>
+            <article id="article2">
+                <img src="backgrounds/5g.jpg" alt="5G">
+                <p>
+                    <h1>5G Facts and Fictions</h1>
+                    The 5G that will be used in coming years is very similar to 4G (LTE) in terms of its technology and therefore its biological effects.
+According to current scientific information, it is not possible to establish a link between mobile telephony radiation and potential health problems.
 
-    <section class="forum"> 
-        <h1> Forum Topics </h1>
-        <div class="topics">
-            <div class="divForum" id="nightLife">
-                <div class="photo">
-                    <img src="backgrounds/nightLfe.jpg" alt="Night Life">
-                </div>
-                <div class="forumPart">
+Available data about cancer can still be uncertain.
+So, as a precautionary measure, the International Agency for Research on Cancer (IARC) has qualified mobile phone radiation as “possibly carcinogenic” along with coffee and bitumen emissions (and not as “carcinogenic” or “probably carcinogenic” which are the two higher classifications).
 
-                </div>
-            </div>
-            <div class="divForum" id="studentLi">
-                <div class="forumPart">
+90 % of individual radiation exposure comes from the mobile phone.
+                    <br>
+                    <a href="https://radio-waves.orange.com/en/radio-networks-and-antennas/5g/facts-and-fiction-about-5g/">
+                    Continue to read...
+                    </a>
+                </p>
+            </article>
+            <article id="article3">
+                <img src="backgrounds/airPollution.jpg" alt="Air Pollution">
+                <p>
+                    <h1>Reducing Air Pollution</h1>
+                    The Clean Air Act of 1970 and the amendments since then have done a great job in requiring people to clean up the air over the United States. Emissions of the six major pollutants regulated by the Clean Air Act, carbon monoxide, lead, nitrous oxides, ozone, sulfur dioxide, and particulates, have decreased by more than 50%. Cars, power plants, and factories individually release less pollution than they did in the mid-20th century. But there are many more cars, power plants, and factories. Many pollutants are still being released and some substances have been found to be pollutants that were not known to be pollutants in the past. There is still much work to be done to continue to clean up the air.
+                    How can air pollution be reduced? Using less fossil fuel is one way to lessen pollution. Some examples of ways to conserve fossil fuels are:
 
-                </div>
-                <div class="photo">
-                    <img src="backgrounds/studentLife.jpg" alt="">
-                </div>
-            </div>
-            <div class="divForum" id="coronavirus">
-                <div class="photo">
-                    <img src="backgrounds/coronaVirus.jpg" alt="">
-                </div>
-                <div class="forumPart">
-                    
+Riding a bike or walking instead of driving.
+Taking a bus or carpooling.
+Buying a car that has greater fuel efficiency.
+Turning off lights and appliances when they are not in use.
+Using energy efficient light bulbs and appliances.
+Buying fewer things that are manufactured using fossil fuels.
+All these actions reduce the amount of energy that power plants need to produce.
+                    <br>
+                    <a href="https://courses.lumenlearning.com/sanjac-earthscience/chapter/reducing-air-pollution/">Continue to read...</a>
+
+                </p>
+            </article>
+           
+        </div>  <br><br>
+        <div class="container">
+            <label for="topic">Topic:</label>
+            <input type="text" name="topic" id="topic" placeholder="Name of the topic you'll talk abotu..." required>
+            <br>
+            <input type="text" id="input" placeholder="write your text here...">
+            <div class="constainer-buttons">
+                <button type="button" name="button" id="comment">comment</button> 
+                 <button type="button" name="button" id="cancel">cancel</button>
+          
+            </div> 
+
+            <div class="box-container">
+                <div class="box"></div>
+                    <button type="button" name="button" id="delete">delete</button>       
                 </div>
             </div>
         </div>
+      <br> <br>
     </section>
+
+    <footer>
+        <h1>Stash's Blog</h1>
+        <h3>Copyright &#169; StashWebPage, Inc.</h3>
+        <p> <a href="">Legal Stuff</a>  &nbsp;&nbsp;  | &nbsp;&nbsp;   <a href="">Privacy Police</a></p>
+    </footer>
               
     </main>
-  
     <script type="text/javascript" src="blog.js"></script>
-  
+    
 </body>
 </html>
-
